@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Healthcare Hack | Agenda</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+        html{
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+      img
+      {
+        vertical-align: middle;
+      }
+      .img-responsive
+      {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+      .img-rounded
+      {
+        border-radius: 3px;
+      }
+      .img-thumbnail
+      {
+        background-color: #fff;
+        border: 1px solid #ededf0;
+        border-radius: 3px;
+        display: inline-block;
+        height: auto;
+        line-height: 1.428571429;
+        max-width: 100%;
+        moz-transition: all .2s ease-in-out;
+        o-transition: all .2s ease-in-out;
+        padding: 2px;
+        transition: all .2s ease-in-out;
+        webkit-transition: all .2s ease-in-out;
+      }
+      .img-circle
+      {
+        border-radius: 50%;
+      }
+      .timeline-centered {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+        .timeline-centered:before, .timeline-centered:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline-centered:after {
+            clear: both;
+        }
+
+        .timeline-centered:before, .timeline-centered:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline-centered:after {
+            clear: both;
+        }
+
+        .timeline-centered:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 4px;
+            background: #f5f5f6;
+            left: 50%;
+            top: 20px;
+            bottom: 20px;
+            margin-left: -4px;
+        }
+
+        .timeline-centered .timeline-entry {
+            position: relative;
+            width: 50%;
+            float: right;
+            margin-bottom: 70px;
+            clear: both;
+        }
+
+            .timeline-centered .timeline-entry:before, .timeline-centered .timeline-entry:after {
+                content: " ";
+                display: table;
+            }
+
+            .timeline-centered .timeline-entry:after {
+                clear: both;
+            }
+
+            .timeline-centered .timeline-entry:before, .timeline-centered .timeline-entry:after {
+                content: " ";
+                display: table;
+            }
+
+            .timeline-centered .timeline-entry:after {
+                clear: both;
+            }
+
+            .timeline-centered .timeline-entry.begin {
+                margin-bottom: 0;
+            }
+
+            .timeline-centered .timeline-entry.left-aligned {
+                float: left;
+            }
+
+                .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
+                    margin-left: 0;
+                    margin-right: -18px;
+                }
+
+                .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
+                    left: auto;
+                    right: -100px;
+                    text-align: left;
+                }
+                .timeline-time{
+                    color: black;
+                }
+
+                .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
+                    float: right;
+                }
+
+                .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
+                    margin-left: 0;
+                    margin-right: 70px;
+                }
+
+                .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
+                    left: auto;
+                    right: 0;
+                    margin-left: 0;
+                    margin-right: -9px;
+                    -moz-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner {
+                    position: relative;
+                    margin-left: -22px;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner:before, .timeline-centered .timeline-entry .timeline-entry-inner:after {
+                    content: " ";
+                    display: table;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner:after {
+                    clear: both;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner:before, .timeline-centered .timeline-entry .timeline-entry-inner:after {
+                    content: " ";
+                    display: table;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner:after {
+                    clear: both;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
+                    position: absolute;
+                    left: -100px;
+                    text-align: right;
+                    padding: 10px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
+                    display: block;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
+                    font-size: 12px;
+                }
+
+                .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+                    background: #fff;
+                    color: #737881;
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    -webkit-background-clip: padding-box;
+                    -moz-background-clip: padding;
+                    background-clip: padding-box;
+                    -webkit-border-radius: 20px;
+                    -moz-border-radius: 20px;
+                    border-radius: 20px;
+                    text-align: center;
+                    -moz-box-shadow: 0 0 0 5px #f5f5f6;
+                    -webkit-box-shadow: 0 0 0 5px #f5f5f6;
+                    box-shadow: 0 0 0 5px #f5f5f6;
+                    line-height: 40px;
+                    font-size: 15px;
+                    float: left;
+                }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-primary {
+                        background-color: #303641;
+                        color: #fff;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-secondary {
+                        background-color: #ee4749;
+                        color: #fff;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-success {
+                        background-color: #00a651;
+                        color: #fff;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-info {
+                        background-color: #21a9e1;
+                        color: #fff;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-warning {
+                        background-color: #fad839;
+                        color: #fff;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-danger {
+                        background-color: #cc2424;
+                        color: #fff;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+                        position: relative;
+                        background: #f5f5f6;
+                        padding: 1.7em;
+                        margin-left: 70px;
+                        -webkit-background-clip: padding-box;
+                        -moz-background-clip: padding;
+                        background-clip: padding-box;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        border-radius: 3px;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 9px 9px 9px 0;
+                        border-color: transparent #f5f5f6 transparent transparent;
+                        left: 0;
+                        top: 10px;
+                        margin-left: -9px;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2, .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
+                        color: #737881;
+                        font-family: "Noto Sans",sans-serif;
+                        font-size: 12px;
+                        margin: 0;
+                        line-height: 1.428571429;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+                        margin-top: 15px;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
+                        color: #303641;
+                    }
+
+                    .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+                        -webkit-opacity: .6;
+                        -moz-opacity: .6;
+                        opacity: .6;
+                        -ms-filter: alpha(opacity=60);
+                        filter: alpha(opacity=60);
+                    }
+      </style>
+</head><!--/head-->
+
+<body>
+	<header id="header" role="banner">
+		<div class="main-nav">
+			<div class="container">
+				<div class="header-top">
+
+				</div>
+		        <div class="row">
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <a class="navbar-brand" href="index.html">
+		                	<img id="icon" style="margin-top:13%;" class="img-responsive" src="images/HealthcareHack.png" alt="logo">
+		                </a>
+		            </div>
+		            <div class="collapse navbar-collapse">
+		                <ul class="nav navbar-nav navbar-right">
+		                    <li class="scroll" id="home-button"><a href="./index.html#home">Home</a></li>
+		                    <li class="scroll" id="explore-button"><a href="./index.html#explore">Explore</a></li>
+		                    <li class="scroll" id="event-button"><a href="./index.html#event">Event</a></li>
+		                    <li class="scroll" id="about-button"><a href="./index.html#about">About</a></li>
+		                    <li class="no-scroll" id="twitter-button"><a href="./index.html#twitter">Twitter</a></li>
+							<li class="scroll" id="location-button"><a href="./index.html#contact">Location</a></li>
+                            <li class="active" id="agenda"><a href="./agenda.html">Agenda</a></li>
+                            <li id="setup"><a href="./setup.html">Setup</a></li>
+		                </ul>
+		            </div>
+		        </div>
+	        </div>
+        </div>
+    </header>
+    <!--/#header-->
+
+	<section id="timeline">
+
+        <div class="row" style="padding-top:10%;">
+            <h1 style="color:black;margin-left:2%">Day 1</h1>
+    		<div class="timeline-centered">
+
+    	<article class="timeline-entry">
+
+    		<div class="timeline-entry-inner">
+    			<time class="timeline-time" datetime="2014-01-10T03:45"><span>08:30 AM</span> <span>21/07/2016</span></time>
+
+    			<div class="timeline-icon bg-success">
+    				<i class="entypo-feather"></i>
+    			</div>
+
+    			<div class="timeline-label">
+    				<h2>Registration<span> IBM Southbank Client Centre</span></h2>
+    				<p>A chance for you to say hello to your teammates and network ahead of the main event</p>
+    			</div>
+    		</div>
+
+    	</article>
+
+
+    	<article class="timeline-entry left-aligned">
+
+    		<div class="timeline-entry-inner">
+    			<time class="timeline-time" datetime="2014-01-10T03:45"><span>09:00 AM</span> <span>21/07/2016</span></time>
+
+    			<div class="timeline-icon bg-secondary">
+    				<i class="entypo-suitcase"></i>
+    			</div>
+
+    			<div class="timeline-label">
+    				<h2>Keynote<span> IBM Client Centre Boyle/Darwin Rooms</span></h2>
+    				<p>Andreas Haimboeck-Tichy delivering the Healthcare Hack 2016 keynote presentation in IBM Southbank</p>
+    			</div>
+    		</div>
+
+    	</article>
+
+
+    	<article class="timeline-entry">
+
+    		<div class="timeline-entry-inner">
+    			<time class="timeline-time"  datetime="2014-01-09T13:22"><span>10:00 AM</span> <span>21/07/2016</span></time>
+
+    			<div class="timeline-icon bg-info">
+    				<i class="entypo-location"></i>
+    			</div>
+
+    			<div class="timeline-label">
+    				<h2>Education Session<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+                    <p>Have a two hour crash course in IBM Bluemix, Design Thinking or Agile methodologies to prepare you for the hackathon and beyond.</p>
+    			</div>
+    		</div>
+
+    	</article>
+    	<article class="timeline-entry left-aligned">
+
+    		<div class="timeline-entry-inner">
+    			<time class="timeline-time" datetime="2014-01-10T03:45"><span>12:00 PM</span> <span>21/07/16</span></time>
+
+    			<div class="timeline-icon bg-warning">
+    				<i class="entypo-camera"></i>
+    			</div>
+
+    			<div class="timeline-label">
+                    <h2>Lunch<span> Wherever you fancy!</span></h2>
+    				<img src="http://www.newtonnews.co.uk/wp-content/uploads/2015/08/out_to_lunch.jpg" class="img-responsive img-rounded full-width">
+    			</div>
+    		</div>
+
+    	</article>
+
+
+    	<article class="timeline-entry">
+
+    		<div class="timeline-entry-inner">
+    			<time class="timeline-time" datetime="2014-01-09T13:22"><span>13:00 AM</span> <span>21/07/2016</span></time>
+
+    			<div class="timeline-icon bg-info">
+    				<i class="entypo-location"></i>
+    			</div>
+
+    			<div class="timeline-label">
+    				<h2>Team Planning and Solution Ideation<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+                    <p>Work together in your teams to tackle one of the challenges. Make sure you spend some time planning out the rest of your time at the hack.</p>
+    			</div>
+    		</div>
+
+    	</article>
+
+        <article class="timeline-entry left-aligned">
+
+    		<div class="timeline-entry-inner">
+    			<time class="timeline-time" datetime="2014-01-10T03:45"><span>14:30 PM</span> <span>21/07/16</span></time>
+
+    			<div class="timeline-icon bg-warning">
+    				<i class="entypo-camera"></i>
+    			</div>
+
+    			<div class="timeline-label">
+                    <h2>Development<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+    				<img src="https://certificationgame.com/wp-content/uploads/2014/12/reflections-from-Certification-Game-hackathon-832x350.jpg" class="img-responsive img-rounded full-width">
+    			</div>
+    		</div>
+
+    	</article>
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>18:30 PM</span> <span>21/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Pizza<span> Yeah - that's right</span></h2>
+                    <img src="http://www.publicdomainpictures.net/pictures/40000/velka/italian-pizza.jpg" class="img-responsive img-rounded full-width">
+                </div>
+            </div>
+
+        </article>
+
+
+    	<article class="timeline-entry begin">
+
+    		<div class="timeline-entry-inner">
+
+    			<div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
+    				<i class="entypo-flight"></i>
+    			</div>
+
+    		</div>
+
+    	</article>
+
+    </div>
+    <h1 style="color:black;margin-left:2%">Day 2</h1>
+    <div class="timeline-centered">
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>08:30 AM</span> <span>22/07/2016</span></time>
+
+                <div class="timeline-icon bg-success">
+                    <i class="entypo-feather"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Check In<span> IBM Southbank Client Centre</span></h2>
+                    <p>A chance for you to catch up with people who experience the problem you're trying to solve day to day and make sure you're on the right track.</p>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="timeline-entry left-aligned">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>09:00 AM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Development<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+                    <img src="http://www.hypepotamus.com/wp-content/uploads/2015/07/hackathon.png" class="img-responsive img-rounded full-width">
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>12:00 PM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Lunch<span> Wherever you fancy! (If you aren't still full of Pizza)</span></h2>
+                    <img src="http://mealime.com/wp-content/uploads/2013/12/bring-a-lunch-to-work.jpg" class="img-responsive img-rounded full-width">
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="timeline-entry left-aligned">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-09T13:22"><span>13:00 AM</span> <span>22/07/2016</span></time>
+
+                <div class="timeline-icon bg-info">
+                    <i class="entypo-location"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Development and Presentation Preparation<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+                    <p>Last dev session of the hack and a chance to start working on your pitch to the judges.</p>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>15:00 PM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Initial Judging<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+                    <p>The judging panel are going to scout around your team and pick their initial favourites</p>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="timeline-entry left-aligned">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>16:00 PM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Final Presentation Preparation<span> Boyle/Darwin (Client Centre) and C43</span></h2>
+                    <p>A chance to put the finishing touches to your presentations.</p>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>16:30 PM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Final Presentations<span> IBM Client Centre Boyle/Darwin rooms</span></h2>
+                    <img src="http://blog.smei.org/wp-content/uploads/2013/03/iStock_000011098014Medium.jpg" class="img-responsive img-rounded full-width">
+                </div>
+            </div>
+
+        </article>
+
+        <article class="timeline-entry left-aligned">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>17:00 PM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Close<span> IBM Client Centre Boyle/Darwin rooms</span></h2>
+                    <p>So, the judges have picked their winner by now - this is just a final farewell from the IBM FIC/FTC and Healthcare Team</p>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="timeline-entry left-aligned">
+
+            <div class="timeline-entry-inner">
+                <time class="timeline-time" datetime="2014-01-10T03:45"><span>17:30 PM</span> <span>22/07/16</span></time>
+
+                <div class="timeline-icon bg-warning">
+                    <i class="entypo-camera"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2>Social<span> The Understudy (adjacent bar)</span></h2>
+                    <img src="http://pubfrato.com/wp-content/uploads/2013/09/1.jpg" class="img-responsive img-rounded full-width">
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="timeline-entry begin">
+
+            <div class="timeline-entry-inner">
+
+                <div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
+                    <i class="entypo-flight"></i>
+                </div>
+
+            </div>
+
+        </article>
+
+        </div>
+    	</div>
+
+
+	</section><!--/#explore-->
+
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+  	<script type="text/javascript" src="js/gmaps.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="js/coundown-timer.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="js/jquery.nav.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+      var $window = $(window),
+        $stickyEl = $('#icon'),
+        elTop = $stickyEl.offset().top;
+
+        $window.scroll(function() {
+          $stickyEl.css({'margin-top':'0%'});
+          if($window.scrollTop() == 0){
+            $stickyEl.css({'margin-top':'13%'});
+          }
+        });
+
+        document.getElementById("agenda").onclick = function () {
+            location.href = "agenda.html";
+        };
+
+        document.getElementById("setup").onclick = function () {
+            location.href = "setup.html";
+        };
+
+        document.getElementById("home-button").onclick = function () {
+            location.href = "./index.html#home";
+        };
+        document.getElementById("explore-button").onclick = function () {
+            location.href = "./index.html#explore";
+        };
+        document.getElementById("event-button").onclick = function () {
+            location.href = "./index.html#event";
+        };
+        document.getElementById("about-button").onclick = function () {
+            location.href = "./index.html#about";
+        };
+        document.getElementById("twitter-button").onclick = function () {
+            location.href = "./index.html#twitter";
+        };
+        document.getElementById("location-button").onclick = function () {
+            location.href = "./index.html#contact";
+        };
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Healthcare Hack | Bluemix</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+
+        html{
+            overflow-x: hidden;
+        }
+
+        .bs-calltoaction{
+            position: relative;
+            width:auto;
+            padding: 15px 25px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .bs-calltoaction > .row{
+            display:table;
+            width: calc(100% + 30px);
+        }
+
+            .bs-calltoaction > .row > [class^="col-"],
+            .bs-calltoaction > .row > [class*=" col-"]{
+                float:none;
+                display:table-cell;
+                vertical-align:middle;
+            }
+
+                .cta-contents{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                    .cta-title{
+                        margin: 0 auto 15px;
+                        padding: 0;
+                    }
+
+                    .cta-desc{
+                        padding: 0;
+                    }
+
+                    .cta-desc p:last-child{
+                        margin-bottom: 0;
+                    }
+
+                .cta-button{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+        @media (max-width: 991px){
+        .bs-calltoaction > .row{
+            display:block;
+            width: auto;
+        }
+
+            .bs-calltoaction > .row > [class^="col-"],
+            .bs-calltoaction > .row > [class*=" col-"]{
+                float:none;
+                display:block;
+                vertical-align:middle;
+                position: relative;
+            }
+
+            .cta-contents{
+                text-align: center;
+            }
+        }
+
+
+        h3 {
+        color: black;
+        }
+        h1 {
+        color: black;
+        }
+        h2 {
+        color: black;
+        }
+        .bs-calltoaction.bs-calltoaction-default{
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        }
+
+        .bs-calltoaction.bs-calltoaction-primary{
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        }
+
+        .bs-calltoaction.bs-calltoaction-info{
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da;
+        }
+
+        .bs-calltoaction.bs-calltoaction-success{
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+        }
+
+        .bs-calltoaction.bs-calltoaction-warning{
+        color: #fff;
+        background-color: #f0ad4e;
+        border-color: #eea236;
+        }
+
+        .bs-calltoaction.bs-calltoaction-danger{
+        color: #fff;
+        background-color: #d9534f;
+        border-color: #d43f3a;
+        }
+
+        .bs-calltoaction.bs-calltoaction-primary .cta-button .btn,
+        .bs-calltoaction.bs-calltoaction-info .cta-button .btn,
+        .bs-calltoaction.bs-calltoaction-success .cta-button .btn,
+        .bs-calltoaction.bs-calltoaction-warning .cta-button .btn,
+        .bs-calltoaction.bs-calltoaction-danger .cta-button .btn{
+        border-color:#fff;
+        }
+
+    </style>
+
+
+</head><!--/head-->
+
+<body>
+	<header id="header" role="banner">
+		<div class="main-nav">
+			<div class="container">
+				<div class="header-top">
+
+				</div>
+		        <div class="row">
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <a class="navbar-brand" href="index.html">
+		                	<img id="icon" style="margin-top:13%;" class="img-responsive" src="images/HealthcareHack.png" alt="logo">
+		                </a>
+		            </div>
+		            <div class="collapse navbar-collapse">
+		                <ul class="nav navbar-nav navbar-right">
+                           <li class="scroll" id="home-button"><a href="./index.html#home">Home</a></li>
+                           <li class="scroll" id="explore-button"><a href="./index.html#explore">Explore</a></li>
+                           <li class="scroll" id="event-button"><a href="./index.html#event">Event</a></li>
+                           <li class="scroll" id="about-button"><a href="./index.html#about">About</a></li>
+                           <li class="no-scroll" id="twitter-button"><a href="./index.html#twitter">Twitter</a></li>
+                           <li class="scroll" id="location-button"><a href="./index.html#contact">Location</a></li>
+                           <li id="agenda"><a href="./agenda.html">Agenda</a></li>
+                           <li class="active" id="setup"><a href="./setup.html">Setup</a></li>
+		                </ul>
+		            </div>
+		        </div>
+	        </div>
+        </div>
+    </header>
+    <!--/#header-->
+
+	<section id="instructions">
+
+        <div class="col-sm-12" style="margin-top:20%">
+            <h1>IBM Bluemix Setup Instructions</h1>
+            <h2>Video Guide</h2>
+
+                <div id="video" class="col-sm-6">
+                    <h3>Windows</h3>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tmBeyLPZloE" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-sm-6">
+                    <h3>Mac</h3>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jcsR7l2zbIc" frameborder="0" allowfullscreen></iframe>
+                </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h2>Step by step</h2>
+            <div class="bs-calltoaction bs-calltoaction-default">
+                <div class="row">
+                    <div class="col-md-9 cta-contents">
+                        <h1 class="cta-title">1. Install JDK</h1>
+                        <div class="cta-desc">
+                            <p>Java SE Development Kit 8 - (8u92)</p>
+                            <p>Not the JRE - It'll be called JDK.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 cta-button">
+                        <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" class="btn btn-lg btn-block btn-default">Get Java!</a>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="bs-calltoaction bs-calltoaction-default">
+                <div class="row">
+                    <div class="col-md-9 cta-contents">
+                        <h1 class="cta-title">2. Get Eclipse</h1>
+                        <div class="cta-desc">
+                            <p>Install Eclipse Neon Java Enterprise Edition</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 cta-button">
+                        <a href="http://eclipse.org" class="btn btn-lg btn-block btn-default">Install Eclipse</a>
+                    </div>
+                 </div>
+            </div>
+            <div class="bs-calltoaction bs-calltoaction-default">
+                <div class="row">
+                    <div class="col-md-9 cta-contents">
+                        <h1 class="cta-title">3. Get the bluemix plugin</h1>
+                        <div class="cta-desc">
+                            <p>1. Open Eclipse</p>
+                            <p>2. Click Help</p>
+                            <p>3. Select Eclipse Marketplace</p>
+                            <p>4. Search/Install: Enide.p2f – Eclipse Node.js IDE .17.plus plugin</p>
+                            <p>4. Search/Install: IBM Bluemix plugin</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 cta-button">
+                        <a href="#video" class="btn btn-lg btn-block btn-default">Video Guide</a>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="bs-calltoaction bs-calltoaction-default">
+                <div class="row">
+                    <div class="col-md-9 cta-contents">
+                        <h1 class="cta-title">4. Install Node.JS</h1>
+                        <div class="cta-desc">
+                            <p>Install Node.JS</p>
+                            <p><a href="https://docs.npmjs.com/getting-started/installing-node">Instructions</a></p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 cta-button">
+                        <a href="https://nodejs.org/en/download/" class="btn btn-lg btn-block btn-default">Install Node</a>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="bs-calltoaction bs-calltoaction-default">
+                <div class="row">
+                    <div class="col-md-9 cta-contents">
+                        <h1 class="cta-title">5. Cloud Foundry</h1>
+                        <div class="cta-desc">
+                            <p>Install the Cloud Foundry Command Line Interface</p>
+                            <p>This will let you talk to your app in the cloud from your local machine</p>
+                            <p><a href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html">Instructions</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 cta-button">
+                        <a href="https://github.com/cloudfoundry/cli#downloads" class="btn btn-lg btn-block btn-default">Get the CLI</a>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="bs-calltoaction bs-calltoaction-default">
+                <div class="row">
+                    <div class="col-md-9 cta-contents">
+                        <h1 class="cta-title">6. Bluemix/Jazz</h1>
+                        <div class="cta-desc">
+                            <p>Register for IBM Bluemix (trial) and Jazz services</p>
+                            <p><a href="https://ibm.biz/BluemixDays">Bluemix here</a></p>
+                            <p><a href="https://hub.jazz.net">Jazz here</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 cta-button">
+                        <a href="http://healthcarehack.mybluemix.net/" class="btn btn-lg btn-block btn-default">I'm Done</a>
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+
+
+	</section><!--/#explore-->
+
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+  	<script type="text/javascript" src="js/gmaps.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="js/coundown-timer.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="js/jquery.nav.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+      var $window = $(window),
+        $stickyEl = $('#icon'),
+        elTop = $stickyEl.offset().top;
+
+        $window.scroll(function() {
+          $stickyEl.css({'margin-top':'0%'});
+          if($window.scrollTop() == 0){
+            $stickyEl.css({'margin-top':'13%'});
+          }
+        });
+
+        document.getElementById("agenda").onclick = function () {
+            location.href = "agenda.html";
+        };
+
+        document.getElementById("setup").onclick = function () {
+            location.href = "setup.html";
+        };
+
+
+        document.getElementById("home-button").onclick = function () {
+            location.href = "./index.html#home";
+        };
+        document.getElementById("explore-button").onclick = function () {
+            location.href = "./index.html#explore";
+        };
+        document.getElementById("event-button").onclick = function () {
+            location.href = "./index.html#event";
+        };
+        document.getElementById("about-button").onclick = function () {
+            location.href = "./index.html#about";
+        };
+        document.getElementById("twitter-button").onclick = function () {
+            location.href = "./index.html#twitter";
+        };
+        document.getElementById("location-button").onclick = function () {
+            location.href = "./index.html#contact";
+        };
+    </script>
+
+</body>
+</html>
